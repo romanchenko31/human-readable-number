@@ -11,13 +11,13 @@ module.exports = function toReadable(number) {
             if (i === 1) {
                 tenths(arrNumber[i], arrNumber);
                 if (arrNumber[i] === "1") {
-                    return arr.join(" ").trim();
+                    return arr.join(" ");
                 }
             }
 
             if (i === 2) {
                 if (arrNumber[i] === "0") {
-                    return arr.join(" ").trim();
+                    return arr.join(" ");
                 }
                 single(arrNumber[i]);
             }
@@ -28,12 +28,12 @@ module.exports = function toReadable(number) {
             if (i === 0) {
                 tenths(arrNumber[i], arrNumber);
                 if (arrNumber[i] === "1") {
-                    return arr.join(" ").trim();
+                    return arr.join(" ");
                 }
             }
             if (i === 1) {
                 if (arrNumber[i] === "0") {
-                    return arr.join(" ").trim();
+                    return arr.join(" ");
                 }
                 single(arrNumber[i]);
             }
@@ -42,7 +42,7 @@ module.exports = function toReadable(number) {
     if (arrNumber.length === 1) {
         arrNumber.map((v) => single(v));
     }
-    return arr.join(" ").trim();
+    return arr.join(" ");
 };
 
 function hundredths(v) {
